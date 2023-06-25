@@ -1,4 +1,5 @@
-import env from "../config/env";
+// import env from "../config/env";
+import Navbar from "./components/Navbar";
 import fetchBlog from "../util/fetchBlog";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -15,15 +16,15 @@ function App() {
   }, []);
   return (
     <div>
+      <Navbar />
       {blogs.map((blog) => {
         return (
-          <div>
-            <h1 key={blog._id}>{blog.title}</h1>
-            <h1>{blog.tags}</h1>
+          <div key={blog}>
+            <h1>{blog.title}</h1>
+            <p>{blog.content}</p>
           </div>
         );
       })}
-      <h1>hello</h1>
     </div>
   );
 }
