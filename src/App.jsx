@@ -1,10 +1,12 @@
 // import env from "../config/env";
 import { useState, useEffect } from "react";
+import env from "../config/env";
 import fetchBlog from "../util/fetchBlog";
 import BlogCard from "./components/BlogCard";
 import FollowButton from "./components/FollowButton";
 import Tags from "./components/Tags";
 import Blog from "./pages/Blog";
+import RecommendCardBox from "./components/RecommendCardBox";
 
 const BlogData = {
   title: "How I turned my life around in 8 months! (Philosophy of 'The Dip')",
@@ -24,9 +26,20 @@ const BlogData = {
 };
 
 function App() {
+  const [blogs, setBlogs] = useState([]);
+
+  const getBlogs = async () => {
+    const res = await fetchBlog(`${env.SERVER_BASE_URL}/random`);
+    return setBlogs(res);
+  };
+
+  useEffect(() => {
+    getBlogs();
+  }, []);
+
   return (
     <div className="">
-      <Blog data={BlogData} />
+      <Blog data={BlogData} blogs={blogs} />
     </div>
   );
 }
