@@ -6,7 +6,6 @@ import BlogCard from "./components/BlogCard";
 import FollowButton from "./components/FollowButton";
 import Tags from "./components/Tags";
 import Blog from "./pages/Blog";
-import RecommendCardBox from "./components/RecommendCardBox";
 
 const BlogData = {
   title: "How I turned my life around in 8 months! (Philosophy of 'The Dip')",
@@ -38,7 +37,7 @@ function App() {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <Blog data={BlogData} blogs={blogs} />
     </div>
   );
