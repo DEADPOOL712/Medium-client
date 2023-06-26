@@ -1,7 +1,8 @@
 import React from "react";
 import Tags from "../components/Tags";
-function Blog({ data }) {
-  console.log(data.tags[0]);
+import RecommendCardBox from "../components/RecommendCardBox";
+
+function Blog({ data, blogs }) {
   return (
     <div className="max-w-[680px] min-w-0 w-full m-auto my-2">
       <h1 className="text-[40px] font-bold text-[#292929] leading-tight ">
@@ -26,6 +27,7 @@ function Blog({ data }) {
           <div className="flex gap-2 text-[#747474] text-sm font-semibold items-center">
             <p>5min read</p>
             <span className="flex relative bottom-1 text-[#868686]">.</span>
+
             <p>{data.date}</p>
           </div>
         </div>
@@ -64,9 +66,10 @@ function Blog({ data }) {
       </div>
       <div className="flex gap-2 my-9">
         {data.tags.map((tag) => {
-          return <Tags text={tag} />;
+          return <Tags key={tag} text={tag} />;
         })}
       </div>
+      <RecommendCardBox blogsOfAuthor={blogs} />
     </div>
   );
 }

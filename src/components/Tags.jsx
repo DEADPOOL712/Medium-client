@@ -1,5 +1,4 @@
 function Tags({ text, padding }) {
-  console.log(text);
   return (
     <div
       className={`flex  bg-[#f2f2f2] text-[#757575]  rounded-full justify-center items-center text-[13px] font-medium cursor-pointer ${
