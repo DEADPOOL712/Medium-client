@@ -1,10 +1,7 @@
-// import env from "../config/env";
+import Tags from "./components/Tags";
+
 function App() {
-  return (
-    <div>
-      <h1>hello!</h1>
-    </div>
-  );
+  return <div className=""></div>;
 }
 
 export default App;
