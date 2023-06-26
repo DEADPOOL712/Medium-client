@@ -1,12 +1,12 @@
 import React from "react";
 import Tags from "../components/Tags";
-import RecommendCardBox from "../components/RecommendCardBox";
+import RecommendBlogCard from "../components/RecommendBlogCard";
 
 function Blog({ data, blogs }) {
   return (
     <div className="">
-      <div className="max-w-[680px] min-w-0 w-full m-auto my-2">
-        <h1 className="text-[40px] font-bold text-[#292929] leading-tight ">
+      <div className="max-w-[680px] min-w-0 w-full lg:px-0 px-8 md:m-auto my-2">
+        <h1 className="lg:text-[40px] md:text-[32px] text-[24px] font-bold text-[#292929] leading-tight ">
           {data.title}
         </h1>
         <div className="flex my-7 items-center">
@@ -71,9 +71,26 @@ function Blog({ data, blogs }) {
           })}
         </div>
       </div>
-      <RecommendCardBox blogsOfAuthor={blogs} />
+      <div className="bg-[#fafafa]">
+        <div className="max-w-[680px] min-w-0 w-full lg:p-0 px-8 m-auto my-2">
+          <div className="py-8">
+            <span className="font-[600] text-[16px]">
+              More From This Author
+            </span>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-5 space-4 pt-8">
+              {blogs.map((blog) => (
+                <RecommendBlogCard key={blog._id} blogsOfAuthor={blog} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default Blog;
+
+{
+  /* */
+}
