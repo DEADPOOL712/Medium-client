@@ -1,7 +1,8 @@
 import React from "react";
 import Tags from "../components/Tags";
-function Blog({ data }) {
-  console.log(data.tags[0]);
+import RecommendCardBox from "../components/RecommendCardBox";
+
+function Blog({ data, blogs }) {
   return (
     <div className="">
       <div className="max-w-[680px] min-w-0 w-full m-auto my-2">
@@ -70,6 +71,7 @@ function Blog({ data }) {
           })}
         </div>
       </div>
+      <RecommendCardBox blogsOfAuthor={blogs} />
     </div>
   );
 }
