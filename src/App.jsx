@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-import Tags from "./components/Tags";
-
-function App() {
-  return <div className=""></div>;
-=======
 // import env from "../config/env";
 import { useState, useEffect } from "react";
 import fetchBlog from "../util/fetchBlog";
@@ -22,11 +16,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <BlogCard blogs={blogs} />
+    <div className="">
+      {blogs.map((blog) => (
+        <BlogCard key={blog._id} blog={blog} />
+      ))}
     </div>
   );
->>>>>>> Stashed changes
 }
 
 export default App;
