@@ -26,22 +26,18 @@ const BlogData = {
 };
 
 function App() {
-  const [blogs, setBlogs] = useState([]);
+  // const [blogs, setBlogs] = useState([]);
 
-  const getBlogs = async () => {
-    const res = await fetchBlog(`${env.SERVER_BASE_URL}/random`);
-    return setBlogs(res);
-  };
+  // const getBlogs = async () => {
+  //   const res = await fetchBlog(`${env.SERVER_BASE_URL}/random`);
+  //   return setBlogs(res);
+  // };
 
-  useEffect(() => {
-    getBlogs();
-  }, []);
+  // useEffect(() => {
+  //   getBlogs();
+  // }, []);
 
-  return (
-    <div className="">
-      <Blog data={BlogData} blogs={blogs} />
-    </div>
-  );
+  return <div className="text-"></div>;
 }
 
 export default App;
