@@ -6,8 +6,10 @@ import FollowButton from "./components/FollowButton";
 
 function App() {
   return (
-    <div className="flex mx-5 my-5 gap-5">
-      <h1>App page!</h1>
+    <div className="">
+      {/* {blogs.map((blog) => (
+        <BlogCard key={blog._id} blog={blog} />
+      ))} */}
       <FollowButton />
     </div>
   );
