@@ -1,11 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< Updated upstream
-=======
 
-body {
+/* body {
   font-family: "Martel Sans", sans-serif;
-}
+} */
 /* Inter, system-ui, Avenir, Helvetica, Arial, */
->>>>>>> Stashed changes
