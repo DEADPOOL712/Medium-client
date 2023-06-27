@@ -1,7 +1,11 @@
 import React from "react";
 import Tags from "../components/Tags";
 import RecommendBlogCard from "../components/RecommendBlogCard";
-
+import Heart from "../assets/icons/heart";
+import Bookmark from "../assets/icons/bookmark";
+import Comment from "../assets/icons/comment";
+import Share from "../assets/icons/share";
+import More from "../assets/icons/more";
 function Blog({ data, blogs }) {
   return (
     <div className="">
@@ -30,6 +34,23 @@ function Blog({ data, blogs }) {
               <span className="flex relative bottom-1 text-[#868686]">.</span>
               <p>{data.date}</p>
             </div>
+          </div>
+        </div>
+        <div className="like-bar flex items-center justify-between px-2 border-y-2 py-3 text-[#939393] my-7">
+          <div className="flex justify-center items-center gap-4">
+            <div className="flex cursor-pointer">
+              <Heart />
+              <span>4.3k</span>
+            </div>
+            <div className="flex cursor-pointer">
+              <Comment />
+              <span>33</span>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <Bookmark />
+            <Share />
+            <More />
           </div>
         </div>
         <div>
@@ -71,7 +92,7 @@ function Blog({ data, blogs }) {
           })}
         </div>
       </div>
-      <div className="bg-[#fafafa]">
+      {/* <div className="bg-[#fafafa]">
         <div className="max-w-[680px] min-w-0 w-full lg:p-0 px-8 m-auto my-2">
           <div className="py-8">
             <span className="font-[600] text-[16px]">
@@ -84,7 +105,7 @@ function Blog({ data, blogs }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

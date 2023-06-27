@@ -1,13 +1,13 @@
 const Heart = () => {
   return (
-    <div>
+    <div className="flex items-center opacity-80 cursor-pointer hover:opacity-100 hover:text-red-400">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-5 h-5"
       >
         <path
           strokeLinecap="round"

@@ -6,6 +6,8 @@ import BlogCard from "./components/BlogCard";
 import FollowButton from "./components/FollowButton";
 import Tags from "./components/Tags";
 import Blog from "./pages/Blog";
+import { Routes, Route } from "react-router-dom";
+import Compose from "./pages/Compose";
 
 const BlogData = {
   title: "How I turned my life around in 8 months! (Philosophy of 'The Dip')",
@@ -36,7 +38,12 @@ function App() {
   //   getBlogs();
   // }, []);
 
-  return <div>{/* <Blog data={BlogData} blogs={blogs} /> */}</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<Blog data={BlogData} />} />
+      <Route path="/c" element={<Compose />} />
+    </Routes>
+  );
 }
 
 export default App;
