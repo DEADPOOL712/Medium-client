@@ -9,7 +9,7 @@ import Blog from "./pages/Blog";
 import { Routes, Route } from "react-router-dom";
 import Compose from "./pages/Compose";
 import Header from "./layout/Header";
-
+import Navbar from "./components/Navbar";
 const BlogData = {
   title: "How I turned my life around in 8 months! (Philosophy of 'The Dip')",
   content: `I was in my final year of college this year and I was a vessel of anxiety, depressions and fear. I was afraid to see what the world has to offer me next. I was afraid to let my parents down. I was afraid to disappoint myself. I was afraid to let all my potential go to waste.
@@ -40,15 +40,12 @@ function App() {
   // }, []);
 
   return (
-    // <Routes>
-    //   <Route path="/" element={<Blog data={BlogData} />} />
-    //   <Route path="/c" element={<Compose />} />
-    // </Routes>
-
-    <div>
-      <Header />
-      <Blog data={BlogData} />
-    </div>
+    <Routes>
+      <Route path="/" element={<Navbar />}>
+        <Route index element={<Blog data={BlogData} />} />
+        <Route path="/c" element={<Compose />} />
+      </Route>
+    </Routes>
   );
 }
 
