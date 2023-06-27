@@ -11,6 +11,11 @@ export const Editor = ({ setEditorState, editorState }) => {
   };
   return (
     <div className="text-editor">
+      <input
+        type="text"
+        className="bg-[#fefcfc] px-2 py-2 font-semibold outline-none border border-[#eaecec] w-full my-2 rounded-lg"
+        placeholder="blog title ..."
+      />
       <EditorToolbar />
       <ReactQuill
         theme="snow"

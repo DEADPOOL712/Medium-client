@@ -40,13 +40,6 @@ export const formats = [
 export const QuillToolbar = () => (
   <div id="toolbar">
     <span className="ql-formats">
-      <select className="ql-header" defaultValue="3">
-        <option value="1">Heading</option>
-        <option value="2">Subheading</option>
-        <option value="3">Normal</option>
-      </select>
-    </span>
-    <span className="ql-formats">
       <button className="ql-bold" />
       <button className="ql-italic" />
       <button className="ql-underline" />
