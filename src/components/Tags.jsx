@@ -1,13 +1,15 @@
 import { useState } from "react";
-function Tags({ text, padding, margin, state, setState }) {
+function Tags({ text, padding, margin, state = "", setState }) {
   const [selected, setSelcted] = useState(false);
   const clickHandler = () => {
-    if (state.includes(text)) {
-      setState(state.filter((tag) => tag !== text));
-      setSelcted(false);
-    } else {
-      setState([...state, text]);
-      setSelcted(true);
+    if (!state == "") {
+      if (state.includes(text)) {
+        setState(state.filter((tag) => tag !== text));
+        setSelcted(false);
+      } else {
+        setState([...state, text]);
+        setSelcted(true);
+      }
     }
   };
   return (
