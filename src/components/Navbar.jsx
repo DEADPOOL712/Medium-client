@@ -127,7 +127,19 @@ function Navbar() {
                       </Button>
                     </div>
                   </DropDown>
-                  <DropDown Right="right-0" Top="lg:top-[226px] top-[220px] ">
+                  <DropDown Right="right-0" Top="top-[220px] block md:hidden">
+                    <a
+                      href="/compose"
+                      className="z-[50] my-[6px] mx-6 hover:text-[#191919] text-[#848484] flex items-center"
+                    >
+                      <Write />
+                      <p className="text-[14px] leading-3">Write</p>
+                    </a>
+                  </DropDown>
+                  <DropDown
+                    Right="right-0"
+                    Top="lg:top-[226px] md:top-[220px] top-[289px] "
+                  >
                     <div className="my-[6px] mx-6 hover:text-[#191919] text-[#848484] flex justify-between">
                       <span>Become a member</span>
                       <Stars />
