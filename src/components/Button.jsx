@@ -1,12 +1,22 @@
-const Button = ({ children, bgColor, textColor, hoverEffect, rounded }) => {
+const Button = ({
+  children,
+  bgColor,
+  textColor,
+  hoverEffect,
+  rounded,
+  padding,
+  margin,
+}) => {
   return (
     <div className="flex justify-center items-center">
       <button
-        className={`text-[14px] py-2 px-3 leading-4 
+        className={`lg:text-[14px] text-[13px] leading-3 lg:leading-4 
         ${bgColor ? bgColor : ""} 
         ${textColor ? textColor : ""}
-        ${rounded ? "rounded-full" : ""}
+        ${rounded ? `rounded-full ${rounded}` : ""}
         ${hoverEffect ? hoverEffect : ""}
+        ${padding ? padding : ""}
+        ${margin ? margin : ""}
       `}
       >
         {children}

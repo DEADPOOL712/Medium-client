@@ -1,6 +1,12 @@
-const DownArrow = ({ isHover }) => {
+import DropDown from "../../components/DropDown";
+
+const DownArrow = ({ isHover, isDropDown }) => {
   return (
-    <div className="hover:text-[#191919]">
+    <div
+      className={`hover:text-[#191919] ${
+        isDropDown && "transition ease-in-ou duration-1000 rotate-90"
+      }`}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
