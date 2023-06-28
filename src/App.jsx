@@ -43,7 +43,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Navbar />}>
         <Route index element={<Blog data={BlogData} />} />
-        <Route path="/c" element={<Compose />} />
+        <Route path="/compose" element={<Compose />} />
       </Route>
     </Routes>
   );

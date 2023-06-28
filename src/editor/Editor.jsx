@@ -4,7 +4,7 @@ import EditorToolbar, { modules, formats } from "./EditorToolbar";
 import "react-quill/dist/quill.snow.css";
 import "./style.css";
 
-export const Editor = ({ setEditorState, editorState }) => {
+export const Editor = ({ setEditorState, editorState, title, setTitle }) => {
   // const [state, setState] = React.useState({ value: null });
   const handleChange = (value) => {
     setEditorState({ value });
@@ -15,6 +15,8 @@ export const Editor = ({ setEditorState, editorState }) => {
         type="text"
         className="bg-[#fefcfc] px-2 py-2 font-semibold outline-none border border-[#eaecec] w-full my-2 rounded-lg"
         placeholder="blog title ..."
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
       />
       <EditorToolbar />
       <ReactQuill

@@ -27,15 +27,15 @@ function Navbar() {
             </li>
           </div>
           <div className="flex items-center justify-between gap-3">
-            <l className="pr-3">
+            <li className="pr-3">
               <a
                 className="flex items-center justify-center opacity-60 hover:opacity-100 "
-                href="/c"
+                href="/compose"
               >
                 <Write />
                 <p className="text-[14px] leading-3">Write</p>
               </a>
-            </l>
+            </li>
             <li>
               <Button
                 hoverEffect="hover:bg-green-700"
