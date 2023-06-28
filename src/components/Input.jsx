@@ -12,9 +12,9 @@ function Input({ text }) {
         >
           <Search />
         </div>
-        <div className="pr-5 py-[10px]">
+        <div className="md:pr-5 md:py-[8px] p-0 hidden md:block">
           <input
-            className="bg-[#fafafa] outline-none text-[14px] w-full"
+            className="bg-[#fafafa] outline-none text-[14px] w-full "
             type={text}
             placeholder="Search Medium"
             onFocus={() => setIsInputFocused(true)}
