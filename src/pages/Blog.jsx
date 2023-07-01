@@ -6,6 +6,8 @@ import Bookmark from "../assets/icons/bookmark";
 import Comment from "../assets/icons/comment";
 import Share from "../assets/icons/share";
 import More from "../assets/icons/more";
+import Modal from "../components/Modal";
+
 function Blog({ data, blogs }) {
   return (
     <div className="">
@@ -111,7 +113,3 @@ function Blog({ data, blogs }) {
 }
 
 export default Blog;
-
-{
-  /* */
-}

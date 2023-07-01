@@ -3,15 +3,18 @@ import Write from "../assets/icons/write";
 import Button from "./Button";
 import User from "../assets/icons/user";
 import Stars from "../assets/icons/stars";
+import Close from "../assets/icons/close";
 import DownArrow from "../assets/icons/downArrow";
 import OneTwentyArrow from "../assets/icons/120degArrow";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import DropDown from "./DropDown";
+import Modal from "./Modal";
 
 function Navbar() {
   const [isHover, setIsHover] = useState(false);
   const [isDropDown, setIsDropDown] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function handleDropDown() {
     setIsDropDown((cur) => !cur);
@@ -19,6 +22,12 @@ function Navbar() {
 
   return (
     <>
+      <Modal isOpen={isModalOpen} isClose={() => setIsModalOpen(false)}>
+        <div className="absolute top-0 right-0 p-2">
+          <Close />
+        </div>
+        <div className="text-xl"> Welcome Back. </div>
+      </Modal>
       <nav className="md:visible lg:hidden mb-2 flex justify-between">
         <div className="flex md:text-[14px] text-[13px] lg:hidden gap-2 items-center text-[#848484] hover:text-[#191919]">
           <a href="/">Open in app</a>
@@ -64,13 +73,16 @@ function Navbar() {
             <li className="pr-3 hidden md:block">
               <a
                 className="flex items-center justify-center opacity-60 hover:opacity-100 "
-                href="/c"
+                href="/compose"
               >
                 <Write />
                 <p className="text-[14px] leading-3">Write</p>
               </a>
             </li>
-            <li className="hidden lg:block">
+            <li
+              className="hidden lg:block"
+              onClick={() => setIsModalOpen(true)}
+            >
               <Button
                 hoverEffect="hover:bg-green-700"
                 bgColor="bg-green-600"
