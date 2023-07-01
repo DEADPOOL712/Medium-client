@@ -23,7 +23,10 @@ function Navbar() {
   return (
     <>
       <Modal isOpen={isModalOpen} isClose={() => setIsModalOpen(false)}>
-        <div className="absolute top-0 right-0 p-2">
+        <div
+          className="absolute top-0 right-0 p-2 cursor-pointer"
+          onClick={() => setIsModalOpen(false)}
+        >
           <Close />
         </div>
         <div className="text-xl"> Welcome Back. </div>
