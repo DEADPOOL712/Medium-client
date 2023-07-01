@@ -90,7 +90,7 @@ function Blog({ data, blogs }) {
         </div>
         <div className="flex gap-2 my-9">
           {data.tags.map((tag) => {
-            return <Tags text={tag} />;
+            return <Tags key={tag} text={tag} />;
           })}
         </div>
       </div>
